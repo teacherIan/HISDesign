@@ -2,6 +2,7 @@ import { Container, Graphics, Assets, TextStyle, Text } from 'pixi.js';
 import { IScene, Manager } from './Manager';
 import { manifest } from './Assets';
 import { SceneA } from './SceneA';
+import { SceneB } from './SceneB';
 import gsap from 'gsap';
 import * as PIXI from 'pixi.js';
 import { PixiPlugin } from 'gsap/PixiPlugin';
@@ -117,7 +118,7 @@ export default class LoadingScene extends Container implements IScene {
   private buttonClicked() {
     console.log(this.loaded);
     if (this.loaded) {
-      Manager.changeScene(new SceneA());
+      Manager.changeScene(new SceneB());
     }
   }
 
